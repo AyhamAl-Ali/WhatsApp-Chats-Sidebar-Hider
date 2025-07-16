@@ -1,0 +1,79 @@
+html {
+  --wa-blur: 5px;
+  --wa-blur-delay: 20ms;
+}
+
+#wa-toggle-button, #wa-settings-button {
+  all: unset;
+  width: 36px;
+  height: 36px;
+  /* background-color: rgba(37, 211, 102, 0.85); */
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 8px; */
+}
+
+/* Blur effect with unblur on hover */
+.wa-blur {
+  filter: blur(var(--wa-blur, 5px));
+  transition: filter 0.3s ease;
+  transition-delay: var(--wa-blur-delay);
+}
+
+.wa-blur:hover {
+  filter: none !important;
+}
+
+
+.wa-button svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  stroke: white;
+}
+
+#wa-settings-panel h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#wa-settings-panel {
+  position: fixed;
+  left: 70px;
+  bottom: 60px;
+  width: 260px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  z-index: 10000;
+  font-size: 16px;
+  color: white;
+  font-family: sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  font-family: system-ui;
+}
+
+#wa-settings-panel label {
+  display: block;
+  margin-top: 10px;
+}
+
+#wa-settings-panel input[type="number"] {
+  width: 80%;
+  padding: 4px;
+  font-size: 13px;
+}
+
+#wa-save-settings {
+  background-color: white;
+  color: black;
+  margin-top: 10px;
+  padding: 5px;
+}
